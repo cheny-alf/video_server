@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	_ "github.com/go-sql-driver/mysql"
 	"log"
+	"video_server/api/defs"
 )
 
 func AddUserCredential(loginName string, pwd string) error {
@@ -46,6 +47,6 @@ func DeleteUser(loginName string, pwd string) error {
 	stmtDel.Close()
 	return nil
 }
-func AddNewVideo(aid int, name string) {
+func AddNewVideo(aid int, name string) (*defs.VideoInfo, error) {
 
 }
